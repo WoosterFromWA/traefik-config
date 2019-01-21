@@ -69,3 +69,16 @@ domain = "wooster.xyz"
 watch = true
 exposedbydefault = false
 network = "plexguide"
+
+[file]
+
+[backends]
+  [backends.backend1]
+    [backends.backend1.servers.server1]
+      url = "http://10.46.119.30"
+
+[frontends]
+  [frontends.frontend1]
+    backend = "backend1"
+    [frontends.frontend1.routes.karlwooster]
+      rule = "Host:vpn.karlwooster.xyz"
